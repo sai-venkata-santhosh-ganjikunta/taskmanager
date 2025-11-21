@@ -75,7 +75,11 @@ public class SecurityConfig {
                                 "/v3/api-docs/**",
                                 "/swagger-ui/**",
                                 "/swagger-ui.html",
-                                "/h2-console/**"
+                                "/api/**",
+                                "/h2-console/**",
+                                "/actuator/health",
+                                "/actuator/info",
+                                "/"
                         ).permitAll()
                         .anyRequest().authenticated()
                 );
@@ -88,4 +92,5 @@ public class SecurityConfig {
 
         return http.build();
     }
+
 }

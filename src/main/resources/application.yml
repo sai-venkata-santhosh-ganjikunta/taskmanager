@@ -27,3 +27,16 @@ springdoc:
 jwt:
   secret: change_this_to_a_long_random_string_!@#123
   expiration-ms: 3600000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    org.springframework.security: DEBUG
